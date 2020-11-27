@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 // Base array for decorators
-public class BaseArray implements SmartArray{
+public class BaseArray implements SmartArray {
     private final ArrayList<Object> elements;
     private final int size;
 

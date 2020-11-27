@@ -7,9 +7,9 @@ public interface SmartArray {
     Object[] toArray();
 
     String operationDescription();
-    
+
     int size();
 
     ArrayList<Object> getElements();
-   
+
 }

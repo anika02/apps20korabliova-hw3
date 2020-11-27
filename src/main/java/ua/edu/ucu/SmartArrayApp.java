@@ -1,6 +1,7 @@
 package ua.edu.ucu;
 
 import java.util.Arrays;
+
 import ua.edu.ucu.functions.MyComparator;
 import ua.edu.ucu.functions.MyFunction;
 import ua.edu.ucu.functions.MyPredicate;
@@ -9,8 +10,8 @@ import ua.edu.ucu.smartarr.*;
 public class SmartArrayApp {
 
     public static Integer[]
-            filterPositiveIntegersSortAndMultiplyBy2(Integer[] integers) {
-                
+    filterPositiveIntegersSortAndMultiplyBy2(Integer[] integers) {
+
         MyPredicate pr = t -> ((Integer) t) > 0;
 
         MyComparator cmp = (o1, o2) -> ((Integer) o1) - ((Integer) o2);
@@ -29,16 +30,18 @@ public class SmartArrayApp {
     }
 
     public static String[]
-            findDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname(Student[] students) {
+    findDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname(
+            Student[] students) {
 
         MyPredicate prYear = t -> ((Student) t).getYear() == 2;
 
         MyPredicate prGPA = t -> ((Student) t).getGPA() >= 4;
 
-        MyComparator cmp = (o1, o2) -> ((Student) o1).getSurname().
+        MyComparator compSurnames = (o1, o2) -> ((Student) o1).getSurname().
                 compareTo(((Student) o2).getSurname());
 
-        MyFunction createString = t -> ((Student) t).getSurname() + " " + ((Student) t).getName();
+        MyFunction createString = t -> ((Student) t).getSurname() +
+                " " + ((Student) t).getName();
 
         SmartArray studentSmartArray = new BaseArray(students);
 
@@ -49,7 +52,7 @@ public class SmartArrayApp {
         // filter by GPA > 4
         studentSmartArray = new FilterDecorator(studentSmartArray, prGPA);
         // sort by surname
-        studentSmartArray = new SortDecorator(studentSmartArray, cmp);
+        studentSmartArray = new SortDecorator(studentSmartArray, compSurnames);
 
         // map to string
         studentSmartArray = new MapDecorator(studentSmartArray, createString);

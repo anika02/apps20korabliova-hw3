@@ -1,6 +1,7 @@
 package ua.edu.ucu;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class StudentTest {
@@ -17,12 +18,13 @@ public class StudentTest {
     }
 
     @Test
-    public void testHashCode() {
+    public void testHashCodeAndEquals() {
         Student students1 = new Student("Ivar",
                 "Grimstad", 3.9, 2);
         Student students2 = new Student("Ivar",
                 "Grimstad", 3.9, 2);
 
         assertEquals(students1.hashCode(), students2.hashCode());
+        assertEquals(students1, students2);
     }
 }

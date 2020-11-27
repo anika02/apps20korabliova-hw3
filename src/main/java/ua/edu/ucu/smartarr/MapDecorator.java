@@ -18,6 +18,7 @@ public class MapDecorator extends SmartArrayDecorator {
         }
         return new BaseArray(array);
     }
+
     @Override
     public Object[] toArray() {
         return this.smartArray.toArray();

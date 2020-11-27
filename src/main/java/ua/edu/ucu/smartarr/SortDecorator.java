@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class SortDecorator extends SmartArrayDecorator {
 
     public SortDecorator(SmartArray smartArray, MyComparator cmp) {
-        super(sortArray(smartArray,cmp));
+        super(sortArray(smartArray, cmp));
     }
 
     private static SmartArray sortArray(SmartArray smartArray, MyComparator cmp) {

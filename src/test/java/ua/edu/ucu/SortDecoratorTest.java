@@ -1,4 +1,5 @@
 package ua.edu.ucu;
+
 import org.junit.Test;
 import ua.edu.ucu.functions.MyComparator;
 import ua.edu.ucu.smartarr.BaseArray;

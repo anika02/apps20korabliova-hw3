@@ -16,9 +16,9 @@ public class DistinctDecorator extends SmartArrayDecorator {
         while (i < array.size() - 1) {
             j = i + 1;
             while (j < array.size()) {
-                if(array.get(i).equals(array.get(j))) {
+                if (array.get(i).equals(array.get(j))) {
                     array.remove(j);
-                }else{
+                } else {
                     ++j;
                 }
             }
