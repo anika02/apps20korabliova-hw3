@@ -11,7 +11,8 @@ public class SortDecorator extends SmartArrayDecorator {
         super(sortArray(smartArray, cmp));
     }
 
-    private static SmartArray sortArray(SmartArray smartArray, MyComparator cmp) {
+    private static SmartArray sortArray(
+            SmartArray smartArray, MyComparator cmp) {
         ArrayList<Object> array = smartArray.getElements();
         array.sort(cmp);
         return new BaseArray(array);

@@ -11,7 +11,8 @@ public class FilterDecorator extends SmartArrayDecorator {
         super(filterArray(smartArray, pr));
     }
 
-    private static SmartArray filterArray(SmartArray smartArray, MyPredicate pr) {
+    private static SmartArray filterArray(
+            SmartArray smartArray, MyPredicate pr) {
         ArrayList<Object> array = smartArray.getElements();
         array.removeIf(item -> !pr.test(item));
         return new BaseArray(array);
