@@ -20,8 +20,8 @@ public class SmartArrayApp {
 
         MyPredicate pr = t -> ((Integer) t) > 0;
 
-        MyComparator increasing = (obj1, obj2)
-                -> ((Integer) obj1) - ((Integer) obj2);
+        MyComparator increasing = (a, b)
+                -> ((Integer) a) - ((Integer) b);
 
         MyFunction func = t -> 2 * ((Integer) t);
 
@@ -44,8 +44,8 @@ public class SmartArrayApp {
 
         MyPredicate prGPA = t -> ((Student) t).getGPA() >= NUMBER;
 
-        MyComparator compSurnames = (obj1, obj2) -> ((Student) obj1).getSurname().
-                compareTo(((Student) obj2).getSurname());
+        MyComparator compSurnames = (a, b) -> ((Student) a).getSurname().
+                compareTo(((Student) b).getSurname());
 
         MyFunction createString = t -> ((Student) t).getSurname()
                 + " " + ((Student) t).getName();

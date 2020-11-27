@@ -37,4 +37,10 @@ public class SmartArrayAppTest {
 
         assertArrayEquals(expectedStudentNames, studentNames);
     }
+
+    @Test
+    public void testSmartArrayApp() {
+        SmartArrayApp smartArrayApp = new SmartArrayApp();
+        assertEquals(SmartArrayApp.class, smartArrayApp.getClass());
+    }
 }

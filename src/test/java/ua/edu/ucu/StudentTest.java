@@ -1,6 +1,7 @@
 package ua.edu.ucu;
 
 import org.junit.Test;
+import ua.edu.ucu.smartarr.BaseArray;
 
 import static org.junit.Assert.*;
 
@@ -38,5 +39,6 @@ public class StudentTest {
         assertNotEquals(students2, students5);
         assertNotEquals(students2, students6);
         assertNotEquals(students2, null);
+        assertNotEquals(students2, new Object[2]);
     }
 }
